@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
 
-function Button() {
+function Button({ language, onClick }) {
+  const { id, title, description } = language;
   return (
-    <div>
-      
+    <div className="col-2 p-2 g-1">
+      <button className="btn btn-primary" onClick={onClick}>
+        {title}
+      </button>
     </div>
-  )
+  );
 }
 
-export default Button
+export default Button;
